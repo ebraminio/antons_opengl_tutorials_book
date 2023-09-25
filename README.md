@@ -1,7 +1,33 @@
-# Anton's OpenGL 4 Tutorials book demo code #
+# Meson port of Anton's OpenGL 4 Tutorials book demo code #
 
 This series of demos accompanies the e-book "Anton's OpenGL 4 Tutorials":
 [antongerdelan.net/opengl](http://antongerdelan.net/opengl/)
+
+## Meson ##
+
+Building using Meson can be more portable and reliable in different platforms, and
+as it's binary free it means a smaller git repository to clone,
+
+``` bash
+git clone https://github.com/ebraminio/antons_opengl_tutorials_book --depth=1
+```
+
+Meson can be installed either from pip or from the system package manager
+```bash
+pip3 install meson
+# or in Windows
+winget install meson
+```
+
+See also https://mesonbuild.com/Getting-meson.html
+
+Test mechanism of Meson is (mis)used for running the code,
+
+```bash
+meson setup build
+meson compile -C build
+meson test -C build
+```
 
 ## Info ##
 
